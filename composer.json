@@ -1,6 +1,7 @@
 {
   "name": "nenglish7/session",
   "type": "library",
+  "description": "A simple and secure session manager!",
   "keywords": ["php", "session"],
   "homepage": "https://github.com/Nenglish7/Session",
   "license": "GPL-3.0",
