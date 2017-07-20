@@ -14,7 +14,7 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "Nenglish7/Cookie": "1.*"
+    "nenglish7/cookie": "1.*"
   },
   "autoload": {
     "psr-0": {
