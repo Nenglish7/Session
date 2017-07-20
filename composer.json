@@ -1,0 +1,23 @@
+{
+  "name": "nenglish7/Session",
+  "type": "library",
+  "keywords": ["php", "session"],
+  "homepage": "https://github.com/Nenglish7/Session",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Nicholas English",
+      "email": "nenglish443@gmail.com",
+      "homepage": "https://github.com/Nenglish7",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "Monolog": "src"
+    }
+  }
+}
