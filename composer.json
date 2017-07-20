@@ -13,7 +13,8 @@
     }
   ],
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.0.0",
+    "Nenglish7/Cookie": "1.*"
   },
   "autoload": {
     "psr-0": {
