@@ -17,6 +17,7 @@
     "php": ">=7.0.0",
     "nenglish7/cookie": "1.*",
     "nenglish7/database": "1.*"
+    "nenglish7/helper": "1.*"
   },
   "autoload": {
     "psr-0": {
