@@ -704,7 +704,7 @@ class Session {
 		$this->setup();
 		// Set the Nenglish7 session handler
 		session_set_save_handler(new LocalSessionHandler, true);
-    }
+	}
 	/*!
 	 * Edit the runtime configuration details and properly set
 	 * the cookie params
@@ -730,7 +730,7 @@ class Session {
 		);
 		// Set the handler to use only files
 		// ini_set('session.save_handler', 'files');
-    }
+	}
 	/*!
 	 * Completely destroy the current session include the session cookie
 	 * and all the session data registered to the session
@@ -776,7 +776,7 @@ class Session {
 		// Set the last activity point
 		$this->set('lastActivity', time());
 		return true;
-    }
+	}
 	/*!
 	 * Reset the current session
 	 *
