@@ -688,8 +688,9 @@ class Session {
 	/**
 	 * @var string $name The name of the php session
 	 * @var object $cookie This will contain the cookie object
+	 * @var int $expire How long the session will last
 	 */
-	protected $name, $cookie;
+	protected $name, $cookie, $expire;
 	/*!
 	 * Prepare the php session before starting
 	 *
@@ -697,10 +698,13 @@ class Session {
 	 * @param object $cookie This will contain the cookie object
 	 * @return void
 	 */
-	public function __construct($name = 'PHPSESSID', Cookie $cookie, $database = false, $details = [])
+	public function __construct($name = 'PHPSESSID', $expire = 1800, $database = false, $details = [], Cookie $cookie)
 	{
+		// Properly set the protected variables
 		$this->name = $name;
 		$this->cookie = $cookie;
+		$this->expire = $expire;
+		// Run the setup
 		$this->setup();
 		// Set the Nenglish7 session handler
 		if ($database) {
@@ -897,7 +901,7 @@ class Session {
 	 */
 	public function delete($var)
 	{
-		// Chck to see if the session variable is set
+		// Check to see if the session variable is set
 		if (isset($_SESSION[$var])) {
 			// Unset the session variable
 			unset($_SESSION[$var]);
