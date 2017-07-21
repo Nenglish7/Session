@@ -697,7 +697,7 @@ class Session {
 	 * @param object $cookie This will contain the cookie object
 	 * @return void
 	 */
-	public function __construct($name = 'PHPSESSID', $database = false, Cookie $cookie, $details = [])
+	public function __construct($name = 'PHPSESSID', Cookie $cookie, $database = false, $details = [])
 	{
 		$this->name = $name;
 		$this->cookie = $cookie;
