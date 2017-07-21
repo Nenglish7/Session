@@ -697,13 +697,15 @@ class Session {
 	 * @param object $cookie This will contain the cookie object
 	 * @return void
 	 */
-	public function __construct($name = 'PHPSESSID', Cookie $cookie)
+	public function __construct($name = 'PHPSESSID', $database = false, Cookie $cookie, $details = [])
 	{
 		$this->name = $name;
 		$this->cookie = $cookie;
 		$this->setup();
 		// Set the Nenglish7 session handler
-		session_set_save_handler(new LocalSessionHandler, true);
+		if ($database) {
+			session_set_save_handler(new LocalSessionHandler($details), true);
+		}
 	}
 	/*!
 	 * Edit the runtime configuration details and properly set
