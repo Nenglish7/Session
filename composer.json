@@ -1,27 +1,41 @@
 {
-  "name": "nenglish7/session",
-  "type": "library",
-  "description": "A simple and secure session manager!",
-  "keywords": ["php", "session"],
-  "homepage": "https://github.com/Nenglish7/Session",
-  "license": "GPL-3.0",
-  "authors": [
-    {
-      "name": "Nicholas English",
-      "email": "nenglish443@gmail.com",
-      "homepage": "https://github.com/Nenglish7",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": ">=7.0.0",
-    "nenglish7/cookie": "1.*",
-    "nenglish7/database": "1.*",
-    "nenglish7/helper": "1.*"
-  },
-  "autoload": {
-    "psr-0": {
-      "Monolog": "src"
-    }
-  }
+    "name": "nenglish7/session",
+    "type": "library",
+    "description": "A powerful session manager that is fast and secure!",
+    "homepage": "https://github.com/Nenglish7/Session",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Nicholas English",
+            "email": "nenglish0820@outlook.com",
+            "homepage": "https://github.com/Nenglish7",
+            "role": "Developer"
+        },
+        {
+            "name": "Nenglish7/Session Contributors",
+            "homepage": "https://github.com/Nenglish7/Session/graphs/contributors",
+            "role": "Contribute"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "nenglish7/validator": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nenglish7\\Session\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
