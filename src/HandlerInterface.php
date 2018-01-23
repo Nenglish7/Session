@@ -16,4 +16,18 @@ namespace Nenglish7\Session;
  */
 interface HandlerInterface
 {
+    /**
+     * set().
+     *
+     * Set a session variable.
+     *
+     * @param string $name The session variable name.
+     * @param mixed $value The value that should be set.
+     *
+     * @throws DomainException          If the session variable name is not valid.
+     * @throws InvalidArgumentException If the value that should be set is an object.
+     *
+     * @return void.
+     */
+    public function set(string $name, $value = null): void;
 }
