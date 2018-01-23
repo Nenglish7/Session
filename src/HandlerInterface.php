@@ -22,10 +22,12 @@ interface HandlerInterface
      * Set a session variable.
      *
      * @param string $name The session variable name.
-     * @param mixed $value The value that should be set.
+     * @param mixed $value The value that is to be set.
      *
-     * @throws DomainException          If the session variable name is not valid.
-     * @throws InvalidArgumentException If the value that should be set is an object.
+     * @throws DomainException          If the `$name` argument is not valid.
+     * @throws InvalidArgumentException If the `$value` argument is an object.
+     * @throws RuntimeException         If the session is not active.
+     * @throws InvalidArgumentException If the `$value` argument is null.
      *
      * @return void.
      */
